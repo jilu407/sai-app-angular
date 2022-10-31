@@ -1,4 +1,4 @@
-pipeline {
+/* pipeline {
     agent any
 
     stages {
@@ -18,4 +18,17 @@ pipeline {
             }
         }
     }
+} */
+node {
+    stage('git') { 
+        git 'https://github.com/jilu407/sai-app-angular.git'
+        
+    stage('install') {
+        npm install
+        
+    }
+    stage('build') {
+        npm run build
+    }
 }
+
