@@ -24,11 +24,11 @@ node {
         git 'https://github.com/jilu407/sai-app-angular.git'
         
     stage('install') {
-        npm install
+        sh 'npm install'
         
     }
     stage('build') {
-        npm run build
+        sh 'npm run build'
     }
 }
 }
