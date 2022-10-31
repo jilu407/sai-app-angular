@@ -31,4 +31,5 @@ node {
         npm run build
     }
 }
+}
 
