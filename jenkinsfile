@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+    stage('build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+    stage('depoly') {
+            steps {
+                sh 'cp -r dist/sai-app/* /var/www/html/'
+            }
+        }
+    }
+}
