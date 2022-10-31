@@ -14,7 +14,7 @@ pipeline {
         }
     stage('depoly') {
             steps {
-                sh 'cp -r dist/sai-app/* /var/www/html/'
+                sh 'sudo cp -r dist/sai-app/* /var/www/html/'
             }
         }
     }
