@@ -30,6 +30,9 @@ node {
     stage('build') {
         sh 'npm run build'
     }
+    stage('deploy') {
+        sh 'sudo cp -r dist/sai-app/* /var/www/html/'
+    }
 }
 }
 
